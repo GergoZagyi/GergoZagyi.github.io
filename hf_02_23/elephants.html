@@ -22,9 +22,26 @@
             </div>
         </nav>
         <div id="homeWrap">
-            <h2>Animals, always and everywhere</h2>
+            <h2 id="typewriter"></h2>
             <a href="about.html"><button>I want to know more</button></a>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Animals, always and everywhere";
+            const speed = 100; 
+            let index = 0;
+    
+            function typeWriter() {
+                if (index < text.length) {
+                    document.getElementById("typewriter").textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+    
+            typeWriter();
+        });
+    </script>
 </body>
 </html>
