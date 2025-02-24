@@ -1,0 +1,275 @@
+/* IMPORTS AND GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Archivo Black", serif;
+}
+
+/* NAVIGATION */
+
+nav {
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #001523;
+}
+
+nav div {
+    padding: 0px 15px;
+}
+
+nav div img {
+    height: 125px;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+}
+
+nav div img:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#menuWrap {
+    display: flex;
+    align-items: center;
+}
+
+#menuWrap h3 {
+    margin: 0px 20px;
+    color: white;
+    opacity: 0.75;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+#menuWrap h3:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* HOME SECTION */
+
+#homeWrap {
+    width: 100%;
+    height: calc(100vh - 125px); 
+    background-image: url(../hf_02_23/img/elephant-edited.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeWrap h2 {
+    color: white; 
+    font-size: 3rem;
+    margin-bottom: 105px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#homeWrap button {
+    padding: 10px 20px;
+    background-color: #ffffff7c;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    animation: breathing 2s ease-in-out infinite; 
+
+}
+
+#homeWrap button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ABOUT US SECTION*/
+
+#aboutUsWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 125px);
+    width: 100vw;
+    background-color: #122430;
+    color: white;
+    overflow: hidden;
+}
+#leftSection{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftSection h2{
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+#leftSection p{
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.75;
+}
+#rightSection img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    animation: fadeInFromRight 1.5s ease-in-out;
+}
+
+/* GET IN TOUCH SECTION */
+
+
+#formWrapper{
+    width: 50%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+form input{
+    padding: 20px;
+    width: 35rem;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 5px;
+}
+form textarea{
+    height: 10rem;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    width: 35rem;
+}
+form button{
+    padding: 10px 20px;
+    background-color: #ffffff7c;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    animation: breathing 2s ease-in-out infinite; 
+}
+form button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+#formSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+#formSection h2{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    
+}
+/* ANIMATIONS */
+
+@keyframes breathing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 920px) {
+   
+   /* home */
+    #homeWrap h2 {
+        font-size: 1.2rem;
+    }
+    #homeWrap button {
+        font-size: 1rem;
+    }
+    #menuWrap h3 {
+        font-size: 0.75rem;
+        margin: 0px 5px;
+    }
+    /* about us */
+
+    #aboutUsWrapper{
+        flex-direction: column-reverse;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #leftSection h2{
+        font-size: 1.5rem;
+    }
+    #leftSection p{
+        font-size: 0.75rem;
+    }
+    #rightSection img{
+        width: 15rem;
+        height: 15rem;
+      
+    }
+    /* get in touch */
+    #formWrapper{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+    form input{
+        width: 70%;
+    }
+    form textarea{
+        width: 70%;
+    }
+
+    #formSection{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    #formSection h2{
+        font-size: 1.5rem;
+    }
+
+}
