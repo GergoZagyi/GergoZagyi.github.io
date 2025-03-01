@@ -1,0 +1,15 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainWrap{
+    width: 80%;
+    height: auto;
+    border: 2px solid #ddd;
+    background-color: #D7B520;
+    margin: auto;
+    display: grid;
+}
