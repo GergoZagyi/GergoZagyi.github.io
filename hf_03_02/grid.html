@@ -8,24 +8,73 @@
     <link rel="stylesheet" href="../styles/hf_03_02.css">
 </head>
 <body>
+    <header></header>
     <div class="mainWrap">
-        <header></header>
-        <aside></aside>
-        <section class="mainSections">
-            <p></p>
-            <img src="" alt="">
-        </section>
-        <section class="mainSections">
-            <p></p>
-            <img src="" alt="">
-        </section>
-        <section class="mainSections">
-            <p></p>
-            <img src="" alt="">
-        </section>
-        <footer>
-            
-        </footer>
+        <aside>
+            <nav>
+                <a href="#firstSection">
+                    <h3>Balaton</h3>
+                </a><a href="#secondSection">
+                    <h3>Tisza-tó</h3>
+                </a><a href="#thirdSection">
+                    <h3>Szelidi-tó</h3>
+                </a>    
+            </nav>
+            <form action="submit" type="post">
+                <h2>Kérem töltse ki a jelentkezési űrlapot!</h2>
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required placeholder="Kérjük adja meg a nevét!">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Kérjük adja meg az email címét!">
+                <label for="number">Telefonszám:</label>
+                <input type="text" id="number" name="number" required placeholder="Kérjük adja meg a telefonszámát!">
+                <label for="lakes">Melyik tó érdekli?</label>   
+                <select name="lakes" id="lakes" required>
+                    <option value="Balaton">Balaton</option>
+                    <option value="Velencei-tó">Velencei-tó</option>
+                    <option value="Tisza-tó">Tisza-tó</option>
+                </select>
+                <label for="hotel">Milyen szállást keres?</label>
+                <select name="hotel" id="hotel" multiple>
+                    <option value="hotel">Hotel</option>
+                    <option value="apartment">Apartman</option>
+                    <option value="camping">Kemping</option>
+                </select>
+                <label for="accomodation">Milyen ellátás legyen?</label>
+                <div>
+                    <input type="radio" id="allinclusive" name="accomodation" value="allinclusive">
+                    <label for="allinclusive">All inclusive</label>
+                </div>
+                <div>
+                    <input type="radio" id="halfboard" name="accomodation" value="halfboard">
+                    <label for="halfboard">Félpanzió</label>
+                </div>
+                <div>
+                    <input type="radio" id="breakfast" name="accomodation" value="breakfast">
+                    <label for="breakfast">Reggeli</label>
+                </div>
+                <label for="message">Üzenet:</label>
+                <textarea id="message" name="message"></textarea>
+                <input type="submit" value="Mehet!">
+            </form>
+        </aside>
+        <div class="sectionWrap">
+            <section class="mainSections" id="firstSection">
+                <p>A Balaton egy tó a Dunántúlon, Közép-Európa legnagyobb tava, Magyarország vízrajzának meghatározó eleme. Könnyen felmelegedő, sekély vize kiválóan alkalmassá teszi a fürdésre és sportolásra, élővilága rendkívül gazdag, a táj változatos vulkanikus kúpjaival sok tekintetben egyedi. Típusa geológiailag a Velencei-tóhoz hasonlóan tektonikus eredetű, sekély vizű ároktó. 77 km hosszú, legkisebb szélessége Tihanynál 1,3 km, legnagyobb 12,7 km Balatonvilágos és Balatonalmádi között, átlagos szélessége 7,7 km, felülete 600 km². Legmélyebb pontja a Tihanyi-szoros legmélyebb árkában az úgynevezett a „Tihanyi-kút”, ahol a tó medre 11-12,5 méter mélyen van. Más forrás szerint a kút mélysége 10,67 méter.</p>
+                <img src="img/balaton.jpg" alt="Balaton látható a képen">
+            </section>
+            <section class="mainSections" id="secondSection">
+                <p>A Tisza-tó Magyarország második legnagyobb tava, amelyet a Tisza folyó felduzzasztásával hoztak létre. A tó területe 127 km², átlagos mélysége 1,3 méter, legmélyebb pontja 17 méter. A Tisza-tó gazdag élővilággal rendelkezik, számos madárfaj és halfaj található itt. A tó környéke kedvelt turisztikai célpont, ahol lehetőség van horgászásra, vízi sportokra és kerékpározásra is. A Tisza-tó környéke számos szabadidős tevékenységet kínál, beleértve a madármegfigyelést, a természetjárást és a vízi túrákat. A tó partján több strand és kemping található, amelyek kiváló lehetőséget biztosítanak a pihenésre és a kikapcsolódásra.</p>
+                <img src="img/tisza.jpg" alt="Tisza-tó látható a képen">
+            </section>
+            <section class="mainSections" id="thirdSection">
+                <p>A Szelidi-tó egy kisebb tó Magyarországon, amely a Duna-Tisza közén található. A tó területe 0,7 km², átlagos mélysége 2-3 méter. A Szelidi-tó környéke csendes és nyugodt, ideális hely a pihenésre és a természet közelségének élvezetére. A tó vize tiszta és alkalmas fürdésre, a partján pedig több strand és kemping található. A Szelidi-tó környéke számos szabadidős tevékenységet kínál, beleértve a horgászatot, a vízi sportokat és a természetjárást. A tó partján található strandok és kempingek kiváló lehetőséget biztosítanak a pihenésre és a kikapcsolódásra. </p>
+                <img src="img/szelidi.jpg" alt="Szelidi-tó látható a képen">
+            </section>
+        </div>
     </div>
+    <footer>
+       <h2>Footer vagyok, ide nem volt instrukció!</h2>     
+    </footer>
 </body>
 </html>
