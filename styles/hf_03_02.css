@@ -204,4 +204,20 @@ footer h2{
         font-size: 14px;
         text-align: center;
     }
+    footer h2{
+        font-size: 15px;
+    }
+    form label{
+        font-size: 16px;
+    }
+    #name, #email, #number, #message{
+        margin: 5px;
+        padding: 5px;
+        width: 90%;
+        border-radius: 10px;
+        align-self: center;
+    }
+    form select{
+        width: 90%;
+    }
 }
