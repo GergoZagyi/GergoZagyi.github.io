@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/index.css">
-    <meta name="description" content="My essental homeworks, all in one place.">
+    <meta name="description" content="My personal github.io to display my works">
 </head>
+
 <body>
     <div id="mainWrap">
-        <h2>Házifeladatok</h2>
         <div id="buttonWrap">
-            <a href="hf_02_23/elephants.html"><button id="hf1">Házi feladat 02_23</button></a>
-            <a href="hf_03_02/grid.html"><button id="hf2">Házi feladat 03_02</button></a>
+            <a href="#" id="cvLink"><button id="hf1">Önéletrajz</button></a>
+            <a href="homeworks.html"><button id="hf2">Házifeladatok</button></a>
         </div>
     </div>
+    <script>
+        document.getElementById('cvLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            var password = prompt('Kérem adja meg a jelszót:');
+            var encodedPassword = 'eW91clBhc3N3b3Jk'; 
+            var decodedPassword = atob(encodedPassword); 
+            if (password === decodedPassword) {
+                window.location.href = 'cv';
+            } else {
+                alert('Helytelen jelszó!');
+            }
+        });
+    </script>
 </body>
+
 </html>

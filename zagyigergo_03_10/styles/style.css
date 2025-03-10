@@ -1,0 +1,479 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainWrap{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.active{
+    color: white;
+    font-weight: 600;
+}
+
+
+
+/* NAVIGATION */
+aside{
+    background-color: #272629;
+    padding: 20px;
+    grid-area: 1/1/5/3;
+    overflow: hidden;
+}
+
+aside nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+aside .imgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+aside img{
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+}
+#signature{
+    margin-top: 25px;
+    width: 75%;
+    font-size: 1.5rem;
+    color: #d6caca;
+    font-family: 'League Script', cursive;
+    color: #50a8ff;
+    text-align: center;
+}
+
+aside nav ul{
+    list-style: none;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 75%;
+}
+
+aside nav ul li{
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+a{
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    color: #d6caca;
+}
+aside nav ul li:hover{
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/* HOME MAIN */
+
+main{
+    grid-area: 1/3/5/11;
+    width: 100%;
+    background-color: #191B1B;
+    padding-left: 10%;
+    font-family: Roboto;
+    overflow: hidden;
+}
+
+.titleWrap{
+    display: flex;
+    letter-spacing: 2px;
+    font-family: Roboto;
+    margin-top: 100px;
+    font-size: 3rem;
+}
+#hey{
+    color: #50a8ff;
+    margin: 10px;
+    font-style: italic;
+    animation: fadeInLeft 1s ease-in-out;
+}
+#there{
+    color: #d6caca;
+    margin: 10px;
+}
+.typeWriterWrap{
+    display: flex;
+}
+main p{
+    margin: 40px 10px;
+    font-size: 2rem;
+    color: #d6caca;
+}
+#typewriter{
+    font-size: 2rem;
+    color: #50a8ff;
+    margin: 40px 10px;
+}
+.mainText{
+    width: 85%;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 120px;
+    animation: fadeInBottom 2s ease-in-out;
+}
+.buttonContainer {
+    width: 85%;
+    text-align: center;
+}
+
+.centerButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #012e5a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.centerButton:hover {
+    background-color: #3a8bd1;
+}
+
+
+
+/* Get in Touch */
+
+.line {
+    width: calc(100vw - 20%);
+    height: 2px;
+    background-color: #50a8ff;
+    position: relative;
+    top: 20px;
+    left: -200px; 
+    transform: rotate(-10deg); 
+    margin-top: 20px; 
+}
+.contactWrap {
+    display: flex;
+    margin-top: 175px;
+    width: 90%;
+    height: auto;
+}
+.contactLeft{
+    width: 40%;
+    border-right: 2px solid #50a8ff63;
+    padding-top: 120px;
+}
+
+.contactLeftElement{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.contactLeftElement .contactTitle{
+    width: 75%;
+}
+.contactLeftElement .contactTitle h4{
+    font-size: 1rem;
+    color: #50a8ff;
+    text-align: left;
+    margin: 10px;
+}
+.contactLeftElement .contactTitle h5{
+    font-size: 1.2rem;
+    color: #d6caca;
+    text-align: left;
+    margin: 10px;
+    opacity: 0.8;
+}
+.contactIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.contactIcon i {
+    font-size: 2rem;
+    color: #50a8ff;
+}
+.contactRight{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    padding-top: 80px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.formElement{ 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;
+    height: 100px;
+}
+form input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+form textarea{
+    width: 250px;
+    height: 65px;
+    border-radius: 10px;
+    border: none;
+}
+form label {
+    font-size: 1.2rem;
+    color: #50a8ff;
+    margin: 10px;
+}
+
+#buttonContainer{
+    align-items: center;
+    justify-content: center;
+}
+/* About Me */
+
+#aboutMeLeft{
+    padding-top: 0px;
+}
+#aboutMeLeft img{
+    height: 350px;
+    margin-left: 100px;
+    margin-top: 50px;
+    animation: fadeInBottom 3s ease-in-out;
+}
+#aboutMeRight{
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+#aboutMeRight h3{
+    color: #50a8ff;
+    font-size: 2rem;
+    margin-top: 50px;
+}
+#aboutMeRight ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    list-style: circle ;
+}
+#aboutMeRight ul li {
+    color: #d6caca;
+}
+
+@media screen and (max-width: 1400px) {
+
+    /* MAIN RESPONSIVE */
+
+    .mainWrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    aside {
+        width: 100%;
+        height: 10rem;
+    }
+    aside nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    aside nav ul{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+    aside nav ul li{
+        padding: 10px 10px;
+        font-size: 1rem;
+    }
+    aside .imgContainer {
+        margin-bottom: 0px;
+    }
+    aside img {
+        width: 100px;
+        height: auto;
+        margin: 0px auto;
+    }
+    #signature {
+        font-size: 1rem;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+        grid-area: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    main h2 {
+        font-size: 2rem;
+    }
+    main p {
+        font-size: 1.5rem;
+    }
+    /* HOME RESPONSIVE */
+    .typeWriterWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #typewriter {
+        font-size: 1.5rem;
+    }
+    .mainText {
+        width: 90%;
+        font-size: 1rem;
+        margin-top: 50px;
+        text-align: center;
+    }
+    /* GET IN TOUCH RESPONSIVE */
+    .line{
+        display: none;
+    }
+    .contactWrap{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .contactRight{
+        padding-top: 0px;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        align-items: center;
+        justify-content: center;
+    }
+    .formElement{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactLeft{
+        width: 100%;
+        border-right: none;
+        padding-top: 0px;
+    }
+    /* ABOUT ME RESPONSIVE */
+    #aboutMeWrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+    }
+    #aboutMeLeft{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #aboutMeLeft img{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    #aboutMeRight h3{
+        margin-bottom: 50px;
+    }
+    #aboutMeRight ul{
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+    #aboutMeRight ul li{
+        margin: 10px;
+    }
+
+}
+/* SOME MOBILE CHANGES */
+@media screen and (max-width: 700px){
+    main{
+        height: 100%;
+    }
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
